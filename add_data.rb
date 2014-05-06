@@ -10,13 +10,19 @@ cdk_id = 'accommodation.89'
 
 api = CitySDK::API.new("apicitysdk.ibb.gov.tr")
 
-api.authenticate(email, passw)
-api.set_layer layer
+begin
 
-data = {
-  test: 'test'
-}
+	api.authenticate(email, passw)
+	api.set_layer layer
 
-api.put("#{cdk_id}/#{layer}", {data: data})
+	data = {
+	  test: 'test'
+	}
 
-api.release
+	api.put("#{cdk_id}/#{layer}", {data: data})
+
+ensure
+
+	api.release
+
+end

@@ -7,7 +7,6 @@ password = "Team#{nr}.hackathonist"
 
 # Layer must exist!
 layer = "team#{nr}.hackathonist"
-cdk_id = 'accommodation.89'
 
 # 1. Parse the input zones from file using json
 data = File.open './test.geojson', 'r:UTF-8'
