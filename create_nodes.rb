@@ -6,7 +6,7 @@ email = "team#{nr}@hackathonist.com"
 password = "Team#{nr}.hackathonist"
 
 # Layer must exist!
-layer = "team#{nr}.hackathonist"
+layer = "hackathonist.team#{nr}.<<layer name here>>"
 
 # 1. Parse the input zones from file using json
 data = File.open './test.geojson', 'r:UTF-8'
@@ -26,12 +26,16 @@ citysdk_json = geojson["features"].map do | feature |
 end
 
 #2. Put stuff in citysdk
+
+api = CitySDK::API.new("apicitysdk.ibb.gov.tr")
+
 begin
 
+	api.authenticate(email, password)
 	# Add parsed data to layer
 	api.set_layer layer
 	citysdk_json.each do |node|
-		#puts zone
+		#puts node 
 		api.create_node node
 	end
 
