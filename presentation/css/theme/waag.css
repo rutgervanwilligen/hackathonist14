@@ -13,7 +13,7 @@ body {
   background-color: white url(waag.png) no-repeat 22px 22px; }
 
 .reveal {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: "Lucida Grande", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
@@ -35,7 +35,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: black;
-  font-family: "Lucida Grande";
+  font-family: "Lucida Grande", "Arial";
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: none;
