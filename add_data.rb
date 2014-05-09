@@ -1,11 +1,13 @@
 require 'citysdk'
 
-nr = 1
+nr = #<<insert team number here>>
 email = "team#{nr}@hackathonist.com"
 password = "Team#{nr}.hackathonist"
 
 # Layer must exist!
-layer = "hackathonist.team#{nr}.<<layer name here>>"
+layer = "hackathonist.team#{nr}.layer"
+
+# cdk_id: node ID to add data to
 cdk_id = 'accommodation.89'
 
 api = CitySDK::API.new("apicitysdk.ibb.gov.tr")

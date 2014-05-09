@@ -1,12 +1,12 @@
 require 'citysdk'
 require 'json'
 
-nr = 1
+nr = #<<insert team number here>>
 email = "team#{nr}@hackathonist.com"
 password = "Team#{nr}.hackathonist"
 
 # Layer must exist!
-layer = "hackathonist.team#{nr}.<<layer name here>>"
+layer = "hackathonist.team#{nr}.layer"
 
 # 1. Parse the input zones from file using json
 data = File.open './test.geojson', 'r:UTF-8'
